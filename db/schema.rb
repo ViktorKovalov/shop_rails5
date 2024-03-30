@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_25_222550) do
+ActiveRecord::Schema.define(version: 2024_03_30_180350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,19 @@ ActiveRecord::Schema.define(version: 2024_03_25_222550) do
     t.string "bytitle"
     t.string "img"
     t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.string "bytitle"
+    t.string "keywords"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -42,8 +53,8 @@ ActiveRecord::Schema.define(version: 2024_03_25_222550) do
     t.string "description"
     t.string "img", default: "default.png"
     t.integer "hit", default: 0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "related_products", force: :cascade do |t|

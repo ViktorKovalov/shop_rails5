@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 gem 'activestorage', '~> 5.2'
+gem 'ancestry'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'breadcrumbs_on_rails'
 gem 'coffee-rails', '~> 4.2'
