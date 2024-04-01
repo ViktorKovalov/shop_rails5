@@ -17,11 +17,10 @@ gem 'jquery-rails'
 gem 'meta-tags'
 gem 'oj'
 gem 'oj_mimic_json'
-# gem 'pq'
-
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.8.1'
 gem 'sass-rails', '~> 5.0'
+gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
